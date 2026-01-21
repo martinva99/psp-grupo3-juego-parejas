@@ -10,7 +10,7 @@ color - amarillo
 música - canción
 agua - océano
 fruta - fresa
-
+flor - tulipán
 
 
 Palabras de respuesta inválida (poner cuantas más, mejor, pero que no tengan que ver con ninguna de las "palabras pregunta"):
@@ -40,4 +40,29 @@ esfera
 teoría
 plegaria
 ordenanza
+heptágono
+paradoja
+inercia
+síntesis
+límite
+sartén
+correo
+cortina
+llave
+tatuaje
+cuchara
+bolsillo
+espejo
+cita
+horario
+tijera
+botón
+recibo
+almohada
+grapa
+pomo
+cenicero
+clavo
+hombro
+barra
 
