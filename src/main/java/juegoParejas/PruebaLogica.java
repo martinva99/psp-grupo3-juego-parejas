@@ -74,7 +74,7 @@ public class PruebaLogica {
 
                 do {
                     respuesta2 = sc.nextLine();
-                    if (respuesta2.equalsIgnoreCase("RESPUESTA " + preguntasRespuestas.get(i).get(1))) { // si responde la respuesta correcta
+                    if (quitarTildes(respuesta2).equalsIgnoreCase("RESPUESTA " + preguntasRespuestas.get(i).get(1))) { // si responde la respuesta correcta
                         System.out.println("OK");
                     } else if (respuesta2.equalsIgnoreCase("PISTA")) {
                         System.out.println("PISTA " + pistas.get(i));

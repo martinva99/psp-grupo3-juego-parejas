@@ -1,15 +1,15 @@
 Lista de palabras:
 
 Palabras para preguntar (no hace falta poner muchas) Formato pregunta - respuesta:
-sol - día
+sol - dia
 madera - mesa
 animal - perro
 deporte - tenis
 color - amarillo
 música - canción
-agua - océano
+agua - oceano
 fruta - fresa
-flor - tulipán
+flor - tulipan
 pistola - bala
 
 Palabras de respuesta inválida (poner cuantas más, mejor, pero que no tengan que ver con ninguna de las "palabras pregunta"):
@@ -20,30 +20,30 @@ oficina
 carpeta
 persiana
 cristal
-pantalón
+pantalon
 punto
-ecuación
+ecuacion
 silencio
 teorema
-lógica
-década
-filosofía
+logica
+decada
+filosofia
 microchip
-noción
+nocion
 eternidad
 algoritmo
 voltio
 estatua
 icono
 esfera
-teoría
+teoria
 plegaria
 ordenanza
-heptágono
+heptagono
 paradoja
 inercia
-síntesis
-límite
+sintesis
+limite
 sartén
 correo
 cortina
@@ -55,7 +55,7 @@ espejo
 cita
 horario
 tijera
-botón
+boton
 recibo
 almohada
 grapa
@@ -64,4 +64,17 @@ cenicero
 clavo
 hombro
 barra
+
+Pistas:
+
+Sol - Día: El periodo de tiempo en que esta estrella nos ilumina.  
+Madera - Mesa: Mueble común que suele estar fabricado con este material.  
+Animal - Perro: Ejemplo de un mamífero doméstico muy leal.  
+Deporte - Tenis: Actividad física que se juega golpeando una pelota con raqueta.  
+Color - Amarillo: El tono que representa la luz de esta categoría.  
+Música - Canción: Una composición sonora que se puede cantar.  
+Agua - Océano: Gran masa de este líquido que cubre el planeta.  
+Fruta - Fresa: Un ejemplo de alimento dulce, rojo y con semillas.  
+Flor - Tulipán: Tipo de planta ornamental conocida por su forma de copa.  
+Pistola - Bala: El proyectil que sale disparado desde este objeto.  
 
