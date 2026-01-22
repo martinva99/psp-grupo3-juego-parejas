@@ -24,8 +24,8 @@ public class PruebaLogica {
         pistas.put(9, "El proyectil que sale disparado desde este objeto");
 
         // Ejemplo del HashMap:
-        // (1, ("SOL", "DÍA"))
-        // (2, ("MADERA", "MESA"))
+        // (0, ("SOL", "DÍA"))
+        // (1, ("MADERA", "MESA"))
         // La primera posición del valor del Hashmap siempre es la pregunta, y la segunda la respuesta
 
         for (listadoPalabras palabra : listadoPalabras.values()) { // meter lista de palabras de "relleno"/"incorrectas" al ArrayList
@@ -90,7 +90,7 @@ public class PruebaLogica {
                 System.out.println("Respuesta no válida");
                 i--;
             }
-            if(i >= preguntasRespuestas.size() - 1){
+            if (i >= preguntasRespuestas.size() - 1) {
                 System.out.println("Gracias por jugar");
             }
         }
