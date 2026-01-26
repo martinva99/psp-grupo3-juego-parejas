@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="psp-juego-ut3" />
+        <module name="mi-proyecto" />
       </profile>
     </annotationProcessing>
   </component>
