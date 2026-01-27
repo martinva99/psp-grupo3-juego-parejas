@@ -16,6 +16,10 @@ Creación de una versión del juego aislada, poco optimizada, pero funcional.
 
 
 Elección sobre el funcionamiento del código (formato tarjetas y formato resultados)
+Primera versión de la lógica del juego terminada
+
+Lógica del juego testeada
+Primera versión del POJO
 
 Para optimizar la generación de cuestionarios aleatorios, 
 se emplean dos HashMaps: uno que vincula cada pregunta con su respuesta correcta 

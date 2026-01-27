@@ -27,9 +27,7 @@ class HandlerParejas implements Runnable {
                 if (linea.equalsIgnoreCase("SALIR")) {
                     out.println("GRACIAS POR JUGAR");
                     break;
-                }
-
-                if (linea.equalsIgnoreCase("NUEVA")) {
+                } else if (linea.equalsIgnoreCase("NUEVA")) {
                     if (juego.nuevaPregunta().equalsIgnoreCase("FIN")) {
                         out.println("NO HAY MÁS PREGUNTAS. GRACIAS POR JUGAR");
                         break;
@@ -37,9 +35,12 @@ class HandlerParejas implements Runnable {
                     out.println(juego.nuevaPregunta());
                 } else if (linea.equalsIgnoreCase("PISTA")) {
                     out.println(juego.pedirPista());
-                } else {
+                } else if (linea.toUpperCase().trim().startsWith("RESPUESTA ")){
                     out.println(juego.responder(linea));
+                } else {
+                    out.println("COMANDO NO RECONOCIDO");
                 }
+
             }
 
         } catch (IOException e) {

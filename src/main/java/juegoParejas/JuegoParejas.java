@@ -1,6 +1,8 @@
 package juegoParejas;
 
+import java.text.Normalizer;
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class JuegoParejas {
 
@@ -47,7 +49,7 @@ public class JuegoParejas {
     }
 
     public String responder(String respuesta) {
-        if (respuesta.equalsIgnoreCase(getRespuestaCorrecta())) {
+        if (quitarTildes(respuesta).trim().equalsIgnoreCase("RESPUESTA " + getRespuestaCorrecta())) {
             return "OK";
         }
         return "ERROR";
@@ -68,5 +70,11 @@ public class JuegoParejas {
 
     private String getRespuestaCorrecta() {
         return preguntasRespuestas.get(preguntaActual).get(1);
+    }
+
+    public static String quitarTildes(String input) {
+        String normalizedString = Normalizer.normalize(input, Normalizer.Form.NFD);
+        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        return pattern.matcher(normalizedString).replaceAll("");
     }
 }
