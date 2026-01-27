@@ -15,4 +15,11 @@ public class TestIntegracion {
     void setUp() {
         juego = DatosJuego.crearJuego();
     }
+
+    /*
+    Cosas que probar:
+        - Cliente conecta con servidor
+        - Lógica del Handler
+        - El juego se comporta bien con el handler
+     */
 }

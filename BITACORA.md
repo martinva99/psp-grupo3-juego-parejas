@@ -23,5 +23,5 @@ Primera versión del POJO
 
 ### 27/01/2026
 
-Creación de la lógica para el cliente y el servidor
+Creación de la lógica para el cliente y el servidor  
 Creacion de tests

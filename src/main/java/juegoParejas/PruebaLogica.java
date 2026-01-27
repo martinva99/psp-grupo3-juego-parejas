@@ -4,6 +4,12 @@ import java.text.Normalizer;
 import java.util.*;
 import java.util.regex.Pattern;
 
+/*
+ * CLASE DE PRUEBA (Primera versión)
+ * NO INFLUYE EN NADA EN EL FUNCIONAMIENTO DEL PROGRAMA
+ * ESTÁ SOLAMENTE A MODO DE ANÉCDOTA (para que se vea por dónde empezamos)
+ */
+
 public class PruebaLogica {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
