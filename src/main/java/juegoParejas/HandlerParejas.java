@@ -3,13 +3,29 @@ package juegoParejas;
 import java.io.*;
 import java.net.*;
 
+/**
+ * Handler que gestiona la comunicación con un cliente.
+ * Cada instancia se ejecuta en un hilo independiente.
+ */
 class HandlerParejas implements Runnable {
+
     private final Socket socket;
 
+    /**
+     * Constructor del handler.
+     *
+     * @param socket socket del cliente
+     */
     public HandlerParejas(Socket socket) {
         this.socket = socket;
     }
 
+    /**
+     * Lógica principal del cliente:
+     * - Lee comandos
+     * - Ejecuta la lógica del juego
+     * - Devuelve respuestas según el protocolo
+     */
     @Override
     public void run() {
 

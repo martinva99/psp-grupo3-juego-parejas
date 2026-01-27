@@ -1,10 +1,19 @@
-
 package juegoParejas;
 
 import java.util.*;
 
+/**
+ * Clase fábrica encargada de crear y configurar
+ * una instancia completa del juego WordMatch.
+ */
 public class DatosJuego {
 
+    /**
+     * Crea una instancia de {@link JuegoParejas} con
+     * preguntas, pistas y palabras incorrectas predefinidas.
+     *
+     * @return juego completamente inicializado
+     */
     public static JuegoParejas crearJuego() {
 
         // Palabras incorrectas

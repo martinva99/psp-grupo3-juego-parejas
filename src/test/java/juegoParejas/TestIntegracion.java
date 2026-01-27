@@ -7,10 +7,19 @@ import java.net.Socket;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests de integración del sistema WordMatch.
+ * <p>
+ * Arranca el servidor real y simula clientes mediante sockets
+ * para comprobar el protocolo y la comunicación completa.
+ */
 class TestIntegracion {
 
     private static Thread servidorThread;
 
+    /**
+     * Arranca el servidor antes de ejecutar los tests.
+     */
     @BeforeAll
     static void iniciarServidor() {
         servidorThread = new Thread(() -> {
@@ -26,7 +35,8 @@ class TestIntegracion {
         // Esperar a que el servidor arranque
         try {
             Thread.sleep(500);
-        } catch (InterruptedException e) {}
+        } catch (InterruptedException e) {
+        }
     }
 
     @Test
@@ -36,7 +46,7 @@ class TestIntegracion {
 
             String respuesta = in.readLine();
             assertEquals("WORDMATCH LISTO", respuesta,
-                    "El programa debería mostrar 'WORDMATCH LISTO' al empezar");
+                    "El programa debe mostrar 'WORDMATCH LISTO' al empezar");
         }
     }
 
@@ -51,7 +61,7 @@ class TestIntegracion {
             out.println("NUEVA");
             String respuesta = in.readLine();
 
-            assertTrue(respuesta.startsWith("PREGUNTA:"), "La pregunta debería empezar por 'PREGUNTA:'");
+            assertTrue(respuesta.startsWith("PREGUNTA:"), "La pregunta debe empezar por 'PREGUNTA:'");
             assertTrue(respuesta.contains("SOL"), "Debe contener la primera pregunta");
         }
     }
@@ -70,7 +80,7 @@ class TestIntegracion {
             out.println("NUEVA");
             String segunda = in.readLine();
 
-            assertTrue(segunda.startsWith("PREGUNTA:"), "La pregunta debería empezar por 'PREGUNTA:'");
+            assertTrue(segunda.startsWith("PREGUNTA:"), "La pregunta debe empezar por 'PREGUNTA:'");
             assertTrue(segunda.contains("MADERA"), "Debe contener la segunda pregunta");
         }
     }
@@ -78,8 +88,8 @@ class TestIntegracion {
     @Test
     void testUltimaPregunta() throws IOException {
         try (Socket socket = new Socket("localhost", 54321);
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
             in.readLine();
 
@@ -91,7 +101,7 @@ class TestIntegracion {
             out.println("NUEVA");
             String ultima = in.readLine();
 
-            assertTrue(ultima.startsWith("PREGUNTA:"), "La pregunta debería empezar por 'PREGUNTA:'");
+            assertTrue(ultima.startsWith("PREGUNTA:"), "La pregunta debe empezar por 'PREGUNTA:'");
             assertTrue(ultima.contains("PISTOLA"), "Debe contener la última pregunta");
         }
     }
@@ -139,8 +149,8 @@ class TestIntegracion {
     @Test
     void testResponderIncorrectamente() throws IOException {
         try (Socket socket = new Socket("localhost", 54321);
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
+             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
 
             in.readLine();
 
@@ -180,7 +190,7 @@ class TestIntegracion {
             out.println("SALIR");
             String respuesta = in.readLine();
 
-            assertEquals("GRACIAS POR JUGAR", respuesta, "Comando salir debería mostrar despedida");
+            assertEquals("GRACIAS POR JUGAR", respuesta, "Comando salir debe mostrar despedida");
         }
     }
 }

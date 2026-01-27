@@ -4,7 +4,16 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
+/**
+ * Cliente del juego WordMatch.
+ * Permite al usuario interactuar con el servidor
+ * mediante comandos por consola.
+ */
 public class ClienteParejas {
+
+    /**
+     * Punto de entrada del cliente.
+     */
     public static void main(String[] args) {
         String host = "localhost";
         int puerto = 54321;
@@ -17,12 +26,12 @@ public class ClienteParejas {
 
             System.out.println("// ------------ INICIANDO WORDMATCH ------------ //\n");
 
-            // COMPROBACIÓN DEL SERVIDOR - ESPERA RESPUESTA INICIAL //
+            // COMPROBACIÓN DEL SERVIDOR - ESPERA RESPUESTA INICIAL
             String mensajeServidor = in.readLine();
             System.out.println("[SERVER] OPCIONES DISPONIBLES\n " + opcionesMenu());
             System.out.println("[SERVER] " + mensajeServidor);
 
-            // COMUNICACIÓN CONTROLADA //
+            // COMUNICACIÓN CONTROLADA
             while (conectado) {
                 System.out.print("> ");
                 String comando = sc.nextLine().trim();
@@ -40,7 +49,7 @@ public class ClienteParejas {
 
                 // VALIDAR
                 if (respuesta == null) {
-                    System.out.println("SERVIDOR CERRO LA CONEXIÓN");
+                    System.out.println("SERVIDOR CERRÓ LA CONEXIÓN");
                     conectado = false;
                 } else {
                     System.out.println("[SERVER] - " + respuesta);
@@ -50,6 +59,12 @@ public class ClienteParejas {
                 if (comando.equalsIgnoreCase("SALIR")) {
                     conectado = false;
                 }
+
+                // SALIR SI SE ACABAN LAS PREGUNTAS
+                if (respuesta.equals("NO HAY MÁS PREGUNTAS. GRACIAS POR JUGAR")) {
+                    conectado = false;
+                }
+
             }
 
         } catch (ConnectException e) {
@@ -61,6 +76,11 @@ public class ClienteParejas {
         System.out.println("// -------------- Cliente desconectado -------------- // ");
     }
 
+    /**
+     * Devuelve el menú de opciones disponibles para el usuario.
+     *
+     * @return texto del menú
+     */
     private static String opcionesMenu() {
         return
                 "  NUEVA - Para empezar a jugar al WordMatch y mostrar una nueva pregunta\n" +

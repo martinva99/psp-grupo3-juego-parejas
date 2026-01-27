@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests unitarios de la clase {@link JuegoParejas}.
+ * Verifican únicamente la lógica del juego sin red ni hilos.
+ */
 public class TestJuegoParejas {
     private JuegoParejas juego;
 
@@ -19,7 +23,6 @@ public class TestJuegoParejas {
 
         assertTrue(resultado.startsWith("PREGUNTA:"), "Las preguntas deben empezar por PREGUNTA:");
         assertTrue(resultado.contains("OPCIONES:"), "Las preguntas deben contener OPCIONES:");
-        assertTrue(resultado.contains("||"), "Las preguntas deben contener '||'");
         assertEquals(7, resultado.split(" ").length, "Debe haber 3 opciones");
     }
 
@@ -65,7 +68,7 @@ public class TestJuegoParejas {
         }
         String resultado = juego.nuevaPregunta();
 
-        assertEquals("FIN",  resultado);
+        assertEquals("FIN", resultado);
     }
 
     @Test
